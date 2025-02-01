@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor {
+    border: 3px solid #ccc;
+    padding: 2rem;
+}
+
+#mybutton {
+    margin: 1rem 0;
+}
