@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+h1 img {
+    width: 3%;
+}
+
+h1 img:hover {
+    width: 3.5%;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+#navbar ul li {
+    padding: 0 5rem;
+    font-size: 18px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    font-size: 19px;
+    color: red;
+    text-shadow: 2px 2px 5px red;
+}
+
+p {
+    text-align: justify;
+    padding: 0 1rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    font-style: italic;
+}

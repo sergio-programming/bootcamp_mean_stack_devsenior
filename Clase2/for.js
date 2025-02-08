@@ -1,4 +1,4 @@
-numero = parseInt(prompt("Por favor ingrese un número para ver su tabla de multplicar: "));
+numero = parseInt(prompt("Por favor ingrese un número para ver su tabla de multiplicar: "));
 
 if (numero > 0) {
     for (i = 1; i < 11; i++) {
