@@ -1,0 +1,29 @@
+.flex-header {
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cta {
+    background-color: lightgray;
+    border: none;
+    padding: 8px 16px;
+    color: blue;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: darkgray;
+}
