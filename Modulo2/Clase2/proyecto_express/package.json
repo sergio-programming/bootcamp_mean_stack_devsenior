@@ -1,0 +1,16 @@
+{
+  "name": "proyecto_express",
+  "version": "1.0.0",
+  "description": "Proyecto inicial express",
+  "license": "ISC",
+  "author": "Sergio Pedraza",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
