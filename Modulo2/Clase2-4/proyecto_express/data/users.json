@@ -1,0 +1,34 @@
+[
+  {
+    "id": "83b0b5a9-7993-4ae1-8f07-8c2ea26cc995",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "$2a$10$scgibwGVurqy7l8W8vbqteuwfWZpg6.6pMjLxszvj1wdM6UDqwI0q",
+    "role": "admin",
+    "createdAt": "2025-04-05T00:31:41.925Z"
+  },
+  {
+    "id": "6ca87a2d-6872-4178-8328-9b13e8fa3d68",
+    "name": "Usuario Prueba",
+    "email": "test_1743814457211@ejemplo.com",
+    "password": "$2a$10$Y0hB0KPzPFakqq9mGRT5eeS5kpX9BMge5DHQa0ZmKEbnKF0L0GkhC",
+    "role": "user",
+    "createdAt": "2025-04-05T00:54:23.289Z"
+  },
+  {
+    "id": "3a751bb7-a070-48c3-841f-4006cbf586a7",
+    "name": "Ejmplo",
+    "email": "Ejmplo@example.com",
+    "password": "$2a$10$MV8RHy5yDgrhqiKmnMcPc.1KFSQlW63akZxqf7WBuR5y4.S5u/L.S",
+    "role": "user",
+    "createdAt": "2025-04-05T02:58:13.790Z"
+  },
+  {
+    "id": "5683dd0e-9d22-4b96-8881-ca0c32573249",
+    "name": "Eejmplo",
+    "email": "Eejmplo@example.com",
+    "password": "$2a$10$9Q7dDx/G5U8E94MDQtnfkOGl69QkM8beAkMB.o5wck0n2E0tZwkka",
+    "role": "admin",
+    "createdAt": "2025-04-05T02:59:14.973Z"
+  }
+]
