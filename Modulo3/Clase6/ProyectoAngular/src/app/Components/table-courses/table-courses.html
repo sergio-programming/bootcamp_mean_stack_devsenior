@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <ul class="list-group mt-5">
+
+        <li *ngFor="let curso of cursos"
+        class="list-group-item d-flex justify-content-between"
+        [ngStyle]="{ color: obtenerColorPorEstado(curso.activo) }"
+        >
+        {{ curso.nombre }}
+
+        <span class="text-muted">
+            {{ curso.duracion }}
+        </span>
+
+        
+
+        </li>
+
+    </ul>
+</div>

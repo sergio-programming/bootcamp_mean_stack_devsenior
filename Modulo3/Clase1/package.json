@@ -1,0 +1,20 @@
+{
+  "name": "clase1",
+  "version": "1.0.0",
+  "description": "Control de errores",
+  "license": "ISC",
+  "author": "Sergio Pedraza",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

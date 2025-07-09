@@ -1,0 +1,22 @@
+<!--Titulo de formulario-->
+<h1>Formulario de usuario</h1>
+
+<form (ngSubmit)="enviar()" #formUsuario="ngForm">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+    <br><br>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" [(ngModel)]="usuario.correo" name="correo" required>
+    <br><br>
+
+    <button type="submit" [disabled]="!formUsuario.valid">Enviar</button>
+
+    <ol *ngFor="let usuario of usuarios">
+        <li>{{ usuario.nombre }}</li>
+    </ol>
+
+</form>
+
+

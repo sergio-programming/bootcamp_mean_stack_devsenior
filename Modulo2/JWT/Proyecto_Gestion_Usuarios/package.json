@@ -1,0 +1,24 @@
+{
+  "name": "proyecto_gestion_usuarios",
+  "version": "1.0.0",
+  "description": "Proyecto de autenticacion de usuarios con JWT",
+  "license": "ISC",
+  "author": "Sergio Pedraza",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "standard": "^17.1.2"
+  }
+}

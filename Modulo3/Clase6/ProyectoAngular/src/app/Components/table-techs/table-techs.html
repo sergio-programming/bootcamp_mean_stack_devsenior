@@ -1,0 +1,33 @@
+<div class="container mt-5">
+
+    <h2>Tabla de tecnologias</h2>
+
+    <table class="table table-bordered">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Tecnologia</th>
+                <th>Tipo</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+        
+            <tr *ngFor="let tech of tecnologias"
+            [ngClass]="{
+                'table-primary': tech.tipo === 'Frontend',
+                'table-success': tech.tipo === 'Backend',
+                'table-danger': tech.tipo === 'Base de Datos'
+            }">
+
+            <td>{{ tech.nombre }}</td>
+            <td>{{ tech.tipo }}</td>
+
+            </tr>
+            
+        </tbody>
+
+    </table>
+
+</div>

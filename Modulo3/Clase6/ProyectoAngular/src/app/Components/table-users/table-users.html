@@ -1,0 +1,51 @@
+<div class="container mt-5">
+
+    <h2 class="mb-4">Lista de Usuarios:</h2>
+
+    <div *ngIf="usuarios.length > 0; else sinUsuarios">
+
+        <table class="table table-bordered  table-striped table-hover">
+
+            <thead class="table-dark">
+
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Perfil</th>
+                    <th>Acceso</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let usuario of usuarios">
+                    <td>{{ usuario.nombre }}</td>
+                    <td>{{ usuario.correo }}</td>
+                    <td>{{ usuario.fechaNacimiento | date: 'longDate' }}</td>
+                    <td>{{ usuario.perfil }}</td>
+
+                    <td>
+                        <span *ngIf="usuario.perfil === 'Administrador'; else sinPermiso">
+                            Acceso Total
+                        </span>
+
+                        <ng-template #sinPermiso>
+                            Sin Acceso de Administrador
+                        </ng-template>
+
+                    </td>
+                </tr>
+
+            </tbody>     
+
+        </table>
+
+    </div>
+
+    <ng-template #sinUsuarios>
+        <div class="alert alert-info">No hay usuarios registrados actualmente</div>           
+    </ng-template>
+
+</div>

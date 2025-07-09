@@ -1,0 +1,19 @@
+<h1>Tabla de Areas:</h1>
+
+<table border="1" [cellPadding]="8" [cellSpacing]="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>DESCRIPCION</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let a of areas">
+      <td>{{ a.id }}</td>
+      <td>{{ a.nombre }}</td>
+      <td>{{ a.descripcion }}</td>
+    </tr>
+  </tbody>
+</table>

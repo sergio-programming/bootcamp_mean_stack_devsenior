@@ -1,0 +1,30 @@
+<div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Componente</h5>
+    </div>
+
+    <div class="card-body">
+
+        <div class="mb-3">
+            <label for="mensajeInput" class="form-label">Mensaje:</label>
+
+            <input
+            id="mensajeInput"
+            type="text"
+            class="form-control"
+            
+            [(ngModel)]="nuevoMensaje"
+
+            (ngModelChange)="enviarMensaje()"
+
+            placeholder="Escribe un mensaje..."
+
+           
+            />
+
+        </div>
+
+    </div>
+
+</div>

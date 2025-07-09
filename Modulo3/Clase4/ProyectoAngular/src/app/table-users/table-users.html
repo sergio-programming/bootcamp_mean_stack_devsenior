@@ -1,0 +1,19 @@
+<h1>Tabla de usuarios:</h1>
+
+<table border="1" [cellPadding]="8" [cellSpacing]="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>CORREO</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let u of usuarios">
+      <td>{{ u.id }}</td>
+      <td>{{ u.nombre }}</td>
+      <td>{{ u.correo }}</td>
+    </tr>
+  </tbody>
+</table>
