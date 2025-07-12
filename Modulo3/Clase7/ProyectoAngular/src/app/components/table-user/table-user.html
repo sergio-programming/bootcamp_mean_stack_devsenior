@@ -1,0 +1,53 @@
+<div class="">
+    <h2 class="text-2x1 font-semibold mb-4">Lista de Usuarios</h2>
+
+    <div *ngIf="usuarios.length > 0; else sinUsuarios">
+
+        <table class="w-full border border-gray-300 rounded-lg overflow-hidden text-sm">
+
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-4 py-2 text-left">Nombre</th>
+                    <th class="px-4 py-2 text-left">Acceso</th>
+                </tr>
+
+            </thead>
+
+            <tbody class="bg-white divide-y divide-gray-200">
+
+                <!-- ngFor: Itera sobre cada usuario en la lista -->
+                <tr *ngFor="let usuario of usuarios" class="hover:bg-gray-100">
+
+                    <!-- Muestra cada propiedad del usuario -->
+                    <td class="px-4 py-2"><a [routerLink]="['/usuario', usuario.correo]"
+                            class="text-blue-600 hover:underline">
+                            {{ usuario.nombre }}
+                        </a></td>
+
+
+                    <!-- ngIf dentro de la tabla: muestra texto condicional según el perfil -->
+                    <td class="px-4 py-2">
+                        <span *ngIf="usuario.perfil === 'Administrador'; else sinPermiso">
+                            <span class="text-green-600 font-medium">Acceso total</span>
+                        </span>
+
+                        <!-- ng-template con #sinPermiso: contenido alternativo si no es administrador -->
+                        <ng-template #sinPermiso>
+                            <span class="text-red-500 italic">Sin acceso de administrador</span>
+                        </ng-template>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <ng-template #sinUsuarios>
+        <div class="bg-blue-100 text-blue-800 p-4 rounded border border-blue-300">
+            No hay usuarios registrados aún.
+        </div>
+    </ng-template>
+
+</div>

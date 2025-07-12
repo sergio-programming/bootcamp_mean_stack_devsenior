@@ -1,0 +1,36 @@
+<!-- Título principal de la aplicación, usando interpolación de Angular -->
+<h1 class="text-2xl font-bold mb-4">{{ title }}</h1>
+
+<!-- Contenedor de botones con estilo Tailwind -->
+<div class="flex gap-4 mb-6">
+  <!-- Botón que navega a la ruta 'page01' al hacer clic -->
+  <button
+    (click)="irAPagina('page01')"
+    class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-colors"
+  >
+    Page 01
+  </button>
+
+  <!-- Botón que navega a la ruta 'page02' al hacer clic -->
+  <button
+    (click)="irAPagina('page02')"
+    class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition-colors"
+  >
+    Page 02
+  </button>
+
+  <!-- Botón que navega a la ruta 'page03' al hacer clic -->
+  <button
+    (click)="irAPagina('page03')"
+    class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded transition-colors"
+  >
+    Page 03
+  </button>
+</div>
+
+<!-- Punto donde Angular insertará dinámicamente el componente asociado a la ruta activa -->
+<router-outlet />
+
+<app-detalle-usuario></app-detalle-usuario>
+
+<app-table-user></app-table-user>

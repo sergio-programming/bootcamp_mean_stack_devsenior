@@ -1,0 +1,14 @@
+<div class="max-w-xl mx-auto mt-6 p-4 border rounded bg-white shadow">
+  <h2 class="text-xl font-semibold mb-4">Detalle del Usuario</h2>
+
+  <div *ngIf="usuario; else noEncontrado">
+    <p><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+    <p><strong>Correo:</strong> {{ usuario.correo }}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{ usuario.fechaNacimiento | date }}</p>
+    <p><strong>Perfil:</strong> {{ usuario.perfil }}</p>
+  </div>
+
+  <ng-template #noEncontrado>
+    <p class="text-red-500">Usuario no encontrado.</p>
+  </ng-template>
+</div>
