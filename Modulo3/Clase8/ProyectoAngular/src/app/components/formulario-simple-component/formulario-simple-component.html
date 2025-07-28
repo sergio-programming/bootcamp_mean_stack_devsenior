@@ -1,0 +1,29 @@
+<div class="container">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="p-4 border rounded bg-light">
+        <!--Campo Producto-->
+        <div class="mb-3">
+            <label for="cancion" class="form-label">Banda:</label>
+            <input type="text" class="form-control" formControlName="banda" placeholder="Escriba una banda...">
+            <div class="text-danger mt-1" *ngIf="formulario.get('banda')?.invalid && formulario.get('banda')?.touched">
+                La banda es obligatoria
+            </div>
+        </div>
+
+        <div formArrayName="canciones">
+            <div *ngFor="let cancion of canciones.controls; let i = index" [formGroupName]="i" class="mb-3 d-flex align-items-center">
+                <div class="flex-grow-1 me-2">
+                    <label class="form-label">Canción {{ i + 1 }}:</label>
+                    <input type="text" class="form-control" formControlName="cancion" placeholder="Ingrese una canción...">
+                    <button type="button" class="btn btn-danger m-1" (click)="eliminarCancion(i)">Eliminar</button>
+                    <div class="text-danger mt-1" *ngIf="cancion.get('cancion')?.invalid && cancion.get('cancion')?.touched">
+                        La canción es obligatoria
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary mx-1" (click)="agregarCancion()">Agregar cancion</button>
+        <button type="submit" class="btn btn-success mx-1" [disabled]="formulario.invalid">Enviar</button>
+
+    </form>
+</div>

@@ -1,0 +1,68 @@
+<div class="container mt-3 mb-3">
+    <form [formGroup]="miFormulario" (ngSubmit)="onSubmit()" class="p-4 border rounded bg-light">
+
+        <!--Campo Nombre-->
+        <div class="mb-3">
+
+            <label for="nombre" class="form-label">Nombre:</label>
+
+            <input
+                id="nombre"
+                type="text"
+                formControlName="nombre"
+                class="form-control"
+                [class.is-invalid]="miFormulario.get('nombre')?.invalid && miFormulario.get('nombre')?.touched"
+            >
+
+            <div class="invalid-feedback" *ngIf="miFormulario.get('nombre')?.invalid && miFormulario.get('nombre')?.touched">
+                El nombre es obligatorio
+            </div>
+
+        </div>
+
+        <!--Campo email-->
+        <div class="mb-3">
+
+            <label for="correo" class="form-label">Correo:</label>
+
+            <input
+                id="correo"
+                type="email"
+                formControlName="correo"
+                class="form-control"
+                [class.is-invalid]="miFormulario.get('correo')?.invalid && miFormulario.get('correo')?.touched"    
+            >
+
+            <div class="invalid-feedback" *ngIf="miFormulario.get('correo')?.invalid && miFormulario.get('correo')?.touched">
+                El correo es invalido
+            </div>
+
+        </div>
+
+        <!--Campo Edad-->
+        <div class="mb-3">
+
+            <label for="edad" class="form-label">Edad:</label>
+
+            <input
+                id="edad" 
+                type="number"
+                formControlName="edad"
+                class="form-control"
+                [class.is-invalid]="miFormulario.get('edad')?.invalid && miFormulario.get('edad')?.touched"
+            >
+
+            <div class="invalid-feedback" *ngIf="miFormulario.get('edad')?.errors?.['min'] ">
+                Debe ser mayor de edad
+            </div>
+
+        </div>
+
+        <!--Boton para enviar el formulario-->
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary" [disabled]="miFormulario.invalid">Enviar</button>
+        </div>
+
+    </form>
+</div>
