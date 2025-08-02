@@ -1,0 +1,130 @@
+{
+  "Productos": [
+    {
+      "id": "2",
+      "nombre": "Mouse Logitech MX Master 3",
+      "descripcion": "Inalámbrico, ergonómico, recargable vía USB-C",
+      "precio": 120,
+      "stock": 20,
+      "imagen": "https://m.media-amazon.com/images/I/61ni3t1ryQL._AC_SL1500_.jpg",
+      "enlace": "https://www.logitech.com"
+    },
+    {
+      "id": "3",
+      "nombre": "Monitor Samsung 27\"",
+      "descripcion": "Resolución QHD, 144Hz, curvo",
+      "precio": 1500,
+      "stock": 8,
+      "imagen": "https://m.media-amazon.com/images/I/71MlcO29QOL._AC_SL1500_.jpg",
+      "enlace": "https://www.samsung.com"
+    },
+    {
+      "id": "4",
+      "nombre": "Teclado Mecánico HyperX",
+      "descripcion": "Switch Blue, retroiluminado RGB",
+      "precio": 300,
+      "stock": 15,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "https://www.hyperx.com"
+    },
+    {
+      "id": "5",
+      "nombre": "Audífonos Bluetooth",
+      "descripcion": "Sonido envolvente, batería de 20 horas",
+      "precio": 80,
+      "stock": 25,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "6",
+      "nombre": "Cámara Web HD",
+      "descripcion": "1080p, micrófono integrado",
+      "precio": 60,
+      "stock": 12,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "7",
+      "nombre": "Tablet Android 10\"",
+      "descripcion": "Octa-Core, 4GB RAM, 64GB almacenamiento",
+      "precio": 200,
+      "stock": 10,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "8",
+      "nombre": "Smartwatch Deportivo",
+      "descripcion": "GPS, monitor de ritmo cardíaco",
+      "precio": 150,
+      "stock": 18,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "9",
+      "nombre": "Memoria USB 64GB",
+      "descripcion": "USB 3.0, alta velocidad",
+      "precio": 15,
+      "stock": 50,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "10",
+      "nombre": "Disco Duro Externo 1TB",
+      "descripcion": "Portátil, USB-C",
+      "precio": 90,
+      "stock": 22,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "11",
+      "nombre": "Silla Gamer",
+      "descripcion": "Ajustable, soporte lumbar",
+      "precio": 250,
+      "stock": 7,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "12",
+      "nombre": "Router WiFi 6",
+      "descripcion": "Velocidad hasta 1.8Gbps",
+      "precio": 130,
+      "stock": 9,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "13",
+      "nombre": "Lámpara LED Escritorio",
+      "descripcion": "Regulable, luz blanca y cálida",
+      "precio": 35,
+      "stock": 30,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "14",
+      "nombre": "Cargador Inalámbrico",
+      "descripcion": "Compatible con Android y iPhone",
+      "precio": 25,
+      "stock": 40,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    },
+    {
+      "id": "e853",
+      "nombre": "ProductTest02",
+      "descripcion": "DescriptionTest 01",
+      "precio": 20,
+      "stock": 100,
+      "imagen": "https://img.freepik.com/free-vector/red-product-sale-tags_78370-1272.jpg",
+      "enlace": "#"
+    }
+  ]
+}

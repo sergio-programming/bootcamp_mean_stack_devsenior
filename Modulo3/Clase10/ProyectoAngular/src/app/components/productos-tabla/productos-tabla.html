@@ -1,0 +1,48 @@
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Lista de Productos</h2>
+
+    <!-- Loader -->
+    <div *ngIf="loading" class="text-center my-4">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
+
+    <!-- Tabla -->
+    <div *ngIf="!loading && productos.length > 0" class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th> <!-- Nueva columna -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos">
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.descripcion }}</td>
+                    <td>{{ producto.precio | currency:'USD' }}</td>
+                    <td>{{ producto.stock }}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm me-2" (click)="eliminarProducto(producto.id)">
+                            Eliminar
+                        </button>
+                        <button class="btn btn-warning btn-sm" (click)="editarProducto(producto)">
+                            Modificar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Mensaje si no hay productos -->
+    <p *ngIf="!loading && productos.length === 0" class="text-center text-muted">
+        No hay productos disponibles.
+    </p>
+</div>

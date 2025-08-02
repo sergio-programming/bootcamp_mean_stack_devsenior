@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <form [formGroup]="productoForm" (ngSubmit)="agregarProducto()" class="border p-3 rounded shadow-sm">
+        <h4 class="mb-3 text-primary">Agregar Nuevo Producto</h4>
+
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" formControlName="nombre">
+            <div *ngIf="productoForm.get('nombre')?.invalid && productoForm.get('nombre')?.touched" class="text-danger">
+                El nombre es obligatorio
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion:</label>
+            <textarea name="descripcion" id="descripcion" class="form-control" formControlName="descripcion">Descripción:</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio:</label>
+            <input type="number" class="form-control" formControlName="precio">
+            <div *ngIf="productoForm.get('precio')?.invalid && productoForm.get('precio')?.touched" class="text-danger">
+                El precio es invalido
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="stock" class="form-label">Stock:</label>
+            <input type="number" class="form-control" formControlName="stock">
+            <div *ngIf="productoForm.get('stock')?.invalid && productoForm.get('stock')?.touched" class="text-danger">
+                Stock invalido
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Imagen (URL) *</label>
+            <input type="text" class="form-control" formControlName="imagen">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Enlace (URL) *</label>
+            <input type="text" class="form-control" formControlName="enlace">
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Agregar Producto</button>
+
+    </form>
+</div>

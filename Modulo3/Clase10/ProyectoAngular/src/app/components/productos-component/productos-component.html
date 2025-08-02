@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Nuestros Productos</h2>
+
+  <div class="row g-4">
+    <div class="col-md-3" *ngFor="let producto of productos">
+      <div class="card h-100 shadow-sm">
+        
+        <!-- Imagen con enlace -->
+        <a [href]="producto.enlace" target="_blank">
+          <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
+        </a>
+
+        <!-- Cuerpo de la tarjeta -->
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">{{ producto.descripcion }}</p>
+        </div>
+
+        <!-- Pie de tarjeta -->
+        <div class="card-footer">
+          <p class="mb-1 fw-bold">{{ producto.precio | currency:'USD' }}</p>
+          <small class="text-muted">Stock: {{ producto.stock }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
