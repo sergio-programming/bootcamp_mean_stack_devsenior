@@ -1,0 +1,14 @@
+{
+  "Usuarios": [
+    {
+      "id": "9250",
+      "nombre": "Sergio Pedraza",
+      "email": "spedraza@edutech.com",
+      "password": "123456",
+      "role": "usuario"
+    }
+  ],
+  "Estudiantes": [],
+  "Profesores": [],
+  "Cursos": []
+}

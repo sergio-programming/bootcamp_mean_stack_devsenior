@@ -54,9 +54,6 @@ export class ProductosForm {
 
         // Reiniciar formulario con valores por defecto para precio y stock
         this.productoForm.reset({ precio: 0, stock: 0 });
-
-        // Reiniciar formulario con valores por defecto para precio y stock
-        this.productoForm.reset({ precio: 0, stock: 0 });
       }, 
       error: (err) => {
         console.error('Error al agregar el producto', err)
