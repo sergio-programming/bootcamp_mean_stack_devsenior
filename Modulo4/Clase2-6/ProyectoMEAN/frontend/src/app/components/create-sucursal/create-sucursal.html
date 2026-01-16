@@ -1,0 +1,79 @@
+<div class="my-6 flex items-center justify-center">
+    <form [formGroup]="createSucursalForm" class="flex flex-col p-6 border border-gray-500 rounded-lg w-2/4">
+        <h4 class="mt-3 text-center text-xl text-blue-400 hover:font-semibold">Modulo de Registro de Sucursal</h4>
+        <input 
+            type="text"
+            id="nombre"
+            formControlName="nombre"
+            class="mt-3 p-2 border rounded-lg"
+            placeholder="Ingrese el nombre..."
+
+        >
+        <div *ngIf="createSucursalForm.get('nombre')?.touched && createSucursalForm.get('nombre')?.invalid" class="text-red-500 text-sm mt-1">
+            El nombre es obligatorio
+        </div>
+
+        <input 
+            type="text"
+            id="direccion"
+            formControlName="direccion"
+            class="mt-3 p-2 border rounded-lg"
+            placeholder="Ingrese la direccion..."
+        >
+        <div *ngIf="createSucursalForm.get('direccion')?.touched && createSucursalForm.get('direccion')?.invalid" class="text-red-500 text-sm mt-1">
+            La dirección es obligatoria
+        </div>
+
+        <input 
+            type="text"
+            id="ciudad"
+            formControlName="ciudad"
+            class="mt-3 p-2 border rounded-lg"
+            placeholder="Ingrese la ciudad..."
+        >
+        <div *ngIf="createSucursalForm.get('ciudad')?.touched && createSucursalForm.get('ciudad')?.invalid" class="text-red-500 text-sm mt-1">
+            La ciudad es obligatoria
+        </div>
+
+        <input 
+            type="text"
+            id="telefono"
+            formControlName="telefono"
+            class="mt-3 p-2 border rounded-lg"
+            placeholder="Ingrese el telefono..."
+        >
+        <div *ngIf="createSucursalForm.get('telefono')?.touched && createSucursalForm.get('telefono')?.invalid" class="text-red-500 text-sm mt-1">
+            El telefono es obligatorio
+        </div>
+
+        <select
+            id="estado"
+            formControlName="estado"
+            class="mt-3 p-2 border rounded-lg"
+        >
+            <option value="activa">Activa</option>
+            <option value="inactiva">Inactiva</option>
+        </select>
+        <div *ngIf="createSucursalForm.get('estado')?.touched && createSucursalForm.get('estado')?.invalid" class="text-red-500 text-sm mt-1">
+            El estado debe ser "activa" o "inactiva".
+        </div>
+
+        <button
+            class=" mt-3 py-2 px-4 rounded-lg bg-blue-400 text-white hover:bg-blue-600 cursor-pointer"
+            type="button"
+            (click)="crearSucursal()"
+        >
+            Registrar Sucursal
+        </button>
+
+        <div *ngIf="mensajeExito" class="mt-3 p-2 bg-green-200 text-green-800 rounded">
+            {{ mensajeExito }}
+        </div>
+
+        <div *ngIf="mensajeError" class="mt-3 p-2 bg-red-200 text-red-800 rounded">
+            {{ mensajeError }}
+        </div>
+
+    </form>
+    
+</div>

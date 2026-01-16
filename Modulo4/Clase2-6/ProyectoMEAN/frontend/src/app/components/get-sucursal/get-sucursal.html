@@ -1,0 +1,38 @@
+<div class="my-6 flex items-center justify-center">
+    <form [formGroup]="idForm" class="flex flex-col p-6 border border-gray-500 rounded-lg w-2/4">
+        <h4 class="mt-3 text-center text-xl text-blue-400 hover:font-semibold">Modulo de Consulta de Sucursal</h4>
+        <input 
+            type="text"
+            id="_id"
+            formControlName="id"
+            class="mt-3 p-2 border rounded-lg"
+            placeholder="Ingrese el _id..."
+
+        >
+        <button
+            class=" mt-3 py-2 px-4 rounded-lg bg-blue-400 text-white hover:bg-blue-600 cursor-pointer"
+            type="button"
+            (click)="mostrarSucursal(idForm.value.id)"
+        >
+            Buscar Sucursal
+        </button>
+
+        <div *ngIf="sucursal" class="flex flex-col mt-3 p-6 border border-gray-400 rounded-lg">
+            <h4 class="mt-2 text-xl font-bold">Datos de la sucursal</h4>
+            <p class="mt-2"><strong>Nombre:</strong> {{ sucursal.nombre }}</p>
+            <p class="mt-2"><strong>Dirección:</strong> {{ sucursal.direccion }}</p>
+            <p class="mt-2"><strong>Ciudad:</strong> {{ sucursal.ciudad }}</p>
+            <p class="mt-2"><strong>Telefono:</strong> {{ sucursal.telefono }}</p>
+            <p class="mt-2"><strong>Estado:</strong> {{ sucursal.estado}}</p>
+        </div>    
+
+        <div *ngIf="mensajeNoEcontrado" class="mt-2 p-2 bg-red-200 text-red-500">
+            {{mensajeNoEcontrado}}
+        </div>
+
+    
+        
+
+    </form>
+    
+</div>

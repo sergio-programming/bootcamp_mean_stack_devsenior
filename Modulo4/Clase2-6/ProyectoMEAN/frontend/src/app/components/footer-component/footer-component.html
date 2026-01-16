@@ -1,0 +1,27 @@
+<footer class="flex flex-row py-4 px-4 border-t border-gray-600 bg-blue-400 text-white mt-auto">
+
+    <div class="flex flex-col text-center w-1/2 space-y-2">
+        <h4 class="text-xl font-semibold px-2 hover:font-bold">Aplicacion de susursales</h4>
+        <p class="font-semibold px-2 hover:font-bold">Todos los derechos reservados ©{{ currentYear }}</p>
+        <p class="font-semibold px-2 hover:font-bold">Creado por Sergio Pedraza</p>
+        <p class="font-semibold px-2 hover:font-bold">spedraza1003@gmail.com</p>
+    </div>
+
+    <div class="flex flex-col text-center w-1/2">
+        <ul class="space-y-2">
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/sucursales']" routerLinkActive="router-link-active">Consultar Sucursales</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/crearSucursal']" routerLinkActive="router-link-active">Crear Sucursales</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/actualizarSucursal']" routerLinkActive="router-link-active">Actualizar Sucursal</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/eliminarSucursal']" routerLinkActive="router-link-active">Eliminar Sucursal</a>
+            </li>
+        </ul>        
+    </div>
+
+</footer>

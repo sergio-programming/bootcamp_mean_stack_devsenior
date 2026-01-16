@@ -1,0 +1,35 @@
+<div class="flex flex-col items-center p-6">
+    <div class="w-3/4 overflow-x-auto">
+        <table class="min-w-full border border-gray-200 rounded-lg shadow-md">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-4 py-3 text-left">ID</th>
+                    <th class="px-4 py-3 text-left">Titulo</th>
+                    <th class="px-4 py-3 text-left">Descripción</th>
+                    <th class="px-4 py-3 text-left">Status</th>
+                    <th class="px-4 py-3 text-left">Severidad</th>
+                    <th class="px-4 py-3 text-left">Reportado por</th>
+                    <th class="px-4 py-3 text-left">Asignado a</th>
+                </tr>
+            </thead>
+
+            <tbody class="bg-white">
+                @for (incident of incidents; track incident.reference) {
+                    <tr
+                        class="border-t hover:bg-gray-100 transition"
+                    >
+                        <td class="px-4 py-3 text-gray-600">{{ incident.reference }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ incident.title }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ incident.description }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ incident.status }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ incident.severity }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ incident.reportedBy }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ incident.assignedTo}}</td>
+                    </tr>
+                }            
+            </tbody>
+            
+        </table>
+    </div>
+    
+</div>

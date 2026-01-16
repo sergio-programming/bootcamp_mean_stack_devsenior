@@ -1,0 +1,41 @@
+<div class="flex flex-col items-center py-10">
+    <div class="w-3/4 overflow-x-auto">
+        <table class="min-w-full border border-gray-200 rounded-lg shadow-md">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-4 py-3 text-left">#</th>
+                    <th class="px-4 py-3 text-left">Nombre</th>
+                    <th class="px-4 py-3 text-left">Email</th>
+                    <th class="px-4 py-3 text-left">Rol</th>
+                    <th class="px-4 py-3 text-left">Estado</th>
+                </tr>
+            </thead>
+
+            <tbody class="bg-white">
+                @for (user of users; track $index) {
+                    <tr
+                        class="border-t hover:bg-gray-100 transition"
+                    >
+                        <td class="px-4 py-3 text-gray-600">{{ $index + 1 }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ user.nombre }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ user.email }}</td>
+                        <td class="px-4 py-3 text-gray-600">{{ user.role }}</td>
+                        @if (user.activo) {
+                            <td class="px-4 py-3 text-white">
+                                <span class="p-2 bg-green-300 rounded-lg">Activo</span>
+                            </td>    
+                        } @else {
+                            <td class="px-4 py-3 text-gray-600">
+                                <span class="p-2 bg-red-300 rounded-lg">Inactivo</span>
+                            </td>
+                        }
+                        
+                    </tr>
+                }            
+            </tbody>
+        
+        </table>
+    </div>
+    
+</div>
+

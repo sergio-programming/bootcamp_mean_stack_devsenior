@@ -1,0 +1,26 @@
+<nav class="flex items-center py-2 px-4 border-b border-gray-600 bg-blue-400 h-20">
+    <h4 class="text-white text-xl font-semibold px-2 hover:font-bold">Aplicacion de sucursales</h4>
+    <div class="flex ml-auto">
+        <ul class="flex items-center space-x-4">
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/sucursales']" routerLinkActive="router-link-active">Consultar Sucursales</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/sucursal']" routerLinkActive="router-link-active">Consultar Sucursal</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/crearSucursal']" routerLinkActive="router-link-active">Crear Sucursales</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/actualizarSucursal']" routerLinkActive="router-link-active">Actualizar Sucursal</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/eliminarSucursal']" routerLinkActive="router-link-active">Eliminar Sucursal</a>
+            </li>
+            <li>
+                <a class="text-white hover:font-semibold" [routerLink]="['/login']" routerLinkActive="router-link-active">Cerrar Sesión</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

@@ -1,0 +1,44 @@
+<!-- Buscador por ID -->
+<div class="container mt-4">
+<div class="mb-3">
+  <label for="id" class="form-label">ID del usuario</label>
+  <div class="input-group">
+    <input
+      #idInput
+      type="number"
+      id="id"
+      class="form-control"
+      placeholder="Ingrese el ID (p. ej., 5)"
+      (keyup.enter)="getUser(+idInput.value)"
+    />
+    <button
+      class="btn btn-primary"
+      type="button"
+      (click)="getUser(+idInput.value)"
+    >
+      Buscar
+    </button>
+  </div>
+  <!-- Validación simple en cliente (opcional) -->
+  <div class="text-danger mt-1" *ngIf="idInput.value && (+idInput.value) < 1">
+    <small>El ID debe ser mayor a 0.</small>
+  </div>
+</div>
+
+<!-- Resultado -->
+<div *ngIf="usuario" class="card">
+  <div class="card-body">
+    <h5 class="card-title">Usuario encontrado</h5>
+    <p class="card-text mb-1"><strong>ID:</strong> {{ usuario.id }}</p>
+    <p class="card-text mb-1"><strong>Nombre:</strong> {{ usuario.nombre }}</p>
+    <p class="card-text mb-1"><strong>Email:</strong> {{ usuario.email }}</p>
+    <p class="card-text mb-1"><strong>Edad:</strong> {{ usuario.edad }}</p>
+    <p class="card-text"><strong>Género:</strong> {{ usuario.genero }}</p>
+  </div>
+</div>
+
+<!-- Sugerencia cuando no hay usuario cargado aún -->
+<div *ngIf="!usuario" class="alert alert-secondary mt-3">
+  Ingresa un ID y presiona <em>Enter</em> o el botón <strong>Buscar</strong>.
+</div>
+</div>

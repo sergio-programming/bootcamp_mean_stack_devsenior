@@ -1,0 +1,27 @@
+<div class="container py-2">
+
+    <table class="table table-bordered table-striped table-hover">
+
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Edad</th>
+                <th>Genero</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.id }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.edad }}</td>
+                <td>{{ usuario.genero }}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="my-6 flex items-center justify-center">
+    <form [formGroup]="idForm" class="flex flex-col p-6 border border-gray-500 rounded-lg w-2/4">
+        <h4 class="mt-3 text-center text-xl text-blue-400 hover:font-semibold">Modulo Eliminación de Sucursal</h4>
+        <input 
+            type="text"
+            id="_id"
+            formControlName="id"
+            class="mt-3 p-2 border rounded-lg"
+            placeholder="Ingrese el _id..."
+
+        >
+        <button
+            class=" mt-3 py-2 px-4 rounded-lg bg-blue-400 text-white hover:bg-blue-600 cursor-pointer"
+            type="button"
+            (click)="eliminarSucursal(idForm.value.id)"
+        >
+            Eliminar Sucursal
+        </button>
+
+    </form>
+    
+</div>
