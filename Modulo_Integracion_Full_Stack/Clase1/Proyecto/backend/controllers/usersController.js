@@ -1,16 +1,17 @@
 import { User, userRoles } from '../models/users.js';
 import bcrypt from 'bcryptjs';
 import {
-    getUsersServices,
+    getUsersService,
     getUserByIdService,
     getUserByEmail,
-    createUserService
+    createUserService,
+    updateUserService
 } from '../services/users.services.js';
 
 export const getUsers = async (req, res) => {
     try {
         
-        const users = await getUsersServices();
+        const users = await getUsersService();
 
         if (users.length === 0) {
             return res.status(404).json({ message : "No se encuentran usuarios registrados actualmente" });
@@ -34,7 +35,7 @@ export const getUserById = async (req, res) => {
             return res.status(404).json({ message : "No se encuentra un usuario registrado con ese id" });
         }
 
-        const { password: _, ...userResponse } = user.toObject();
+        const { password: _, ...userResponse } = user;
         return res.status(200).json(userResponse);
 
     } catch (error) {
@@ -100,38 +101,33 @@ export const updateUser = async (req, res) => {
     try {
         
         const { id } = req.params;
-        const { fullName, email, role, isActive } = req.body;
+        const body = req.body;
 
-        const user = await User.findById(id)
+        const user = await getUserByIdService(id);
 
         if (!user) {
             return res.status(404).json({ message : "No se encuentra un usuario registrado con ese id" })
         }
 
-        if (fullName !== undefined && fullName.length < 3) {
+        if (body.fullName && body.fullName.length < 3) {
             return res.status(400).json({ message : "El nombre debe tener una longitud mínima de 3 caracteres" });
         }
 
-        if (email !== undefined && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (body.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(body.email)) {
             return res.status(400).json({ message : 'El email debe tener un formato válido' });
         }
 
-        if (role !== undefined && !userRoles.includes(role)) {
+        if (body.role && !userRoles.includes(body.role)) {
             return res.status(400).json({ message : 'Debe seleccionar una de las opciones válidas para asignar el rol de usuario' });
         }
 
-        if (isActive !== undefined && typeof isActive !== "boolean") {
+        if (body.isActive !== undefined && typeof body.isActive !== "boolean") {
             return res.status(400).json({ message : 'El valor debe ser booleano' });
         }
 
-        if (fullName !== undefined) user.fullName = fullName;        
-        if (email !== undefined) user.email = email;
-        if (role !== undefined) user.role = role;
-        if (isActive !== undefined) user.isActive = isActive;
+        const updatedUser = await updateUserService(id, body);
 
-        const updatedUser = await user.save();
-
-        const { password: _, ...userResponse } = updatedUser.toObject();
+        const { password: _, ...userResponse } = updatedUser;
         return res.status(200).json({
             message : "El usuario se ha actualizado correctamente",
             user : userResponse

@@ -41,3 +41,4 @@ export const updateIncidentService = async(id, body) => {
     .lean()
     .exec();
 }
+
